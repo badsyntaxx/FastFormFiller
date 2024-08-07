@@ -156,4 +156,4 @@ function getUnfilledElements(inputs) {
     return unfilled;
 }
 
-export default FormFiller;
+export default QuickFill;
