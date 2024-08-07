@@ -1,5 +1,5 @@
 {
-    "name": "formfiller",
+    "name": "quickfill",
     "version": "1.0.0",
     "description": "A simple js plugin that takes JSON and uses it to fill out forms.",
     "main": "index.js",
@@ -8,12 +8,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/badsyntaxx/FormFiller.git"
+        "url": "git+https://github.com/badsyntaxx/QuickFill.git"
     },
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/badsyntaxx/FormFiller/issues"
+        "url": "https://github.com/badsyntaxx/QuickFill/issues"
     },
-    "homepage": "https://github.com/badsyntaxx/FormFiller#readme"
+    "homepage": "https://github.com/badsyntaxx/QuickFill#readme"
 }

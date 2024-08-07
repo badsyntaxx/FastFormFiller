@@ -1,4 +1,4 @@
-async function FormFiller(settings) {
+async function QuickFill(settings) {
     const defaults = {
         form: 'form',
         url: null,
