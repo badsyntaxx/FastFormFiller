@@ -1,4 +1,4 @@
-async function QuickFill(settings) {
+async function fff(settings) {
     const defaults = {
         form: 'form',
         url: null,
@@ -130,15 +130,15 @@ function populateForm(data, settings) {
 
 function getUnfilledElements(inputs) {
     let unfilled = [];
-    const checkedRadioNames = new Set();
+    let radioGroups = {};
     for (const input of inputs) {
         switch (input.type) {
             case 'radio':
-                // Check if a radio button with the same name is already checked
-                if (!input.checked && !checkedRadioNames.has(input.name)) {
-                    unfilled.push(input.name);
-                } else {
-                    checkedRadioNames.add(input.name); // Add checked radio name to the set
+                if (!radioGroups[input.name]) {
+                    radioGroups[input.name] = false;
+                }
+                if (input.checked) {
+                    radioGroups[input.name] = true;
                 }
                 break;
             case 'checkbox':
@@ -153,7 +153,15 @@ function getUnfilledElements(inputs) {
                 break;
         }
     }
+
+    // Check radio groups and add unchecked groups to unfilled
+    for (const [name, isChecked] of Object.entries(radioGroups)) {
+        if (!isChecked) {
+            unfilled.push(name);
+        }
+    }
+
     return unfilled;
 }
 
-export default QuickFill;
+export default fff;

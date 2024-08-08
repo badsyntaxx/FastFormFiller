@@ -1,1 +1,1 @@
-declare module 'quickfill';
+declare module 'fastformfiller';
